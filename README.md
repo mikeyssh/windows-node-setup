@@ -1,4 +1,4 @@
-Windows 11 to install Curl, Ubuntu, NVM, Node, and Yarn.
+```Windows 11 to install Curl, Ubuntu, NVM, Node, and Yarn.
 
 // powershell (admin)
 > wsl --install
@@ -33,4 +33,4 @@ $ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 $ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 $ sudo apt update
 $ sudo apt install --no-install-recommends yarn
-$ yarn -v
+$ yarn -v```
