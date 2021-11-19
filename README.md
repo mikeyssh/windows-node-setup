@@ -9,7 +9,7 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 &&
 $ wsl --set-default-version 2
 $ wsl --list --verbose
-$ wsl -d Ubuntu
+$ wsl --install -d Ubuntu
 &&
 // open windows terminal
 > bash
