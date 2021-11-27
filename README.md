@@ -10,8 +10,8 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 $ wsl --set-default-version 2
 $ wsl --list --verbose
 $ wsl --install -d Ubuntu
-&&
-// open windows terminal
+&& *restart machine
+// open windows terminal (admin)
 > bash
 &&
 // curl install
@@ -31,7 +31,6 @@ $ node -v
 // yarn install
 $ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 $ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-$ sudo apt update
 $ sudo apt install --no-install-recommends yarn
 $ yarn -v
 ```
