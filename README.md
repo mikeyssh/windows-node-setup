@@ -22,7 +22,7 @@ sudo apt install curl
 $ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 $ source ~/.profile
 &&
-$ node && nodejs install
+// node && nodejs install
 $ nvm install node
 $ nvm install node
 $ nvm install 14.18.1
