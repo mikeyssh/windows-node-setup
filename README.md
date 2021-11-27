@@ -22,10 +22,20 @@ $ wsl --install -d Ubuntu
 // open windows terminal (admin)
 > bash
 
-&&
+&& 
 
 // curl install
 sudo apt update
+
+*****note*****
+// if the last command doesn't work, you may need to add your Ubuntu user to the wheel group to enable sudo priviliges
+// $ sudo -i
+// $ usermod -aG sudo <replace-with-your-Ubuntu-username>
+// $ sudo su - <replace-with-your-Ubuntu-username-username>
+// $ whoami
+*****note*****
+
+// back to curl install
 sudo apt install curl
 
 &&
@@ -37,7 +47,6 @@ $ source ~/.profile
 &&
 
 // node && nodejs install
-$ nvm install node
 $ nvm install node
 $ nvm install 14.18.1
 $ nvm uninstall v17.1.0
