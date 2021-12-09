@@ -8,34 +8,24 @@
 > dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
 &&
+> wget https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
-IN A BROWSER => https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+if that doesn't work, try in browser => https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 &&
-
-$ wsl --set-default-version 2
-$ wsl --list --verbose
-$ wsl --install -d Ubuntu
 
 && *restart machine*
 
 // open windows terminal (admin)
+
+> wsl --set-default-version 2
+> wsl --install -d Ubuntu
+
+// open windows terminal
+
 > bash
 
-&& 
-
 // curl install
-sudo apt update
-
-*****note*****
-// if the last command doesn't work, you may need to add your Ubuntu user to the wheel group to enable sudo priviliges
-// $ sudo -i
-// $ usermod -aG sudo <replace-with-your-Ubuntu-username>
-// $ sudo su - <replace-with-your-Ubuntu-username-username>
-// $ whoami
-*****note*****
-
-// back to curl install
 sudo apt install curl
 
 &&
@@ -47,17 +37,16 @@ $ source ~/.profile
 &&
 
 // node && nodejs install
-$ nvm install node
-$ nvm install 14.18.1
-$ nvm uninstall v17.1.0
-$ node -v
+
+$ nvm install v14.18.1
+$ node --version
 
 &&
 
 // yarn install
+$ sudo apt update
 $ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 $ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 $ sudo apt install --no-install-recommends yarn
-$ sudo apt update
-$ yarn -v
+$ yarn --version
 ```
